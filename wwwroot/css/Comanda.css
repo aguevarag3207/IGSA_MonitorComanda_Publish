@@ -4,6 +4,7 @@
 
 html, body {
     width: 100%;
+    height: 100%;
     overflow-x: hidden;
 }
 
@@ -12,6 +13,7 @@ body {
     padding-bottom: env(safe-area-inset-bottom);
 }
 
+/* Tamaños táctiles */
 button,
 .btn,
 .form-control,
@@ -32,9 +34,9 @@ textarea {
 .sp-card {
     border-radius: 14px;
     border: 1px solid #e5e7eb;
-    background-color: #fff;
-    transition: transform .15s ease, box-shadow .15s ease;
+    background-color: #ffffff;
     cursor: pointer;
+    transition: transform .15s ease, box-shadow .15s ease;
 }
 
     .sp-card:hover {
@@ -74,6 +76,7 @@ textarea {
     display: flex;
     align-items: center;
     justify-content: center;
+    font-size: 1.1rem;
 }
 
 /* ===============================
@@ -85,6 +88,7 @@ textarea {
     justify-content: space-between;
     padding: .6rem 0;
     border-bottom: 1px dashed #e5e7eb;
+    font-size: .9rem;
 }
 
     .sp-list-item:last-child {
@@ -96,9 +100,14 @@ textarea {
 ================================ */
 
 .filter-btn {
-    min-height: 48px;
+    min-height: 40px;
+    padding: .35rem .75rem;
+    font-size: .85rem;
     border-radius: 999px;
     font-weight: 500;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     transition: all .15s ease-in-out;
 }
 
@@ -126,33 +135,90 @@ textarea {
 }
 
 /* ===============================
-   MODAL
+   MODAL BASE
 ================================ */
 
 .modal-header {
     border-bottom: 1px solid #e5e7eb;
+    padding: .75rem 1rem;
+}
+
+    .modal-header .badge {
+        font-size: .85rem;
+    }
+
+.modal-body {
+    font-size: .95rem;
 }
 
 .modal-footer {
     border-top: 1px solid #e5e7eb;
+    padding: .5rem;
 }
 
-/* FULLSCREEN FIX TABLET / MOBILE */
+    /* Footer compacto */
+    .modal-footer .btn {
+        flex: 1;
+        min-height: 36px;
+        font-size: .8rem;
+        padding: .35rem .5rem;
+    }
+
+/* ===============================
+   MODAL FULLSCREEN RESPONSIVE
+   FIX DEFINITIVO TABLET / MOBILE
+================================ */
+
 @media (max-width: 991.98px) {
+
+    .modal {
+        padding: 0 !important;
+    }
 
     .modal-dialog {
         margin: 0 !important;
         width: 100vw !important;
         max-width: 100vw !important;
-        height: 100vh !important;
+        height: 100dvh !important;
     }
 
     .modal-content {
-        height: 100vh !important;
+        height: 100dvh !important;
+        max-height: 100dvh !important;
         border-radius: 0 !important;
+        display: flex;
+        flex-direction: column;
+        overflow: hidden;
+    }
+
+    .modal-header {
+        flex-shrink: 0;
+    }
+
+    .modal-body {
+        flex: 1 1 auto;
+        overflow-y: auto;
+        -webkit-overflow-scrolling: touch;
+    }
+
+    .modal-footer {
+        flex-shrink: 0;
     }
 
     body.modal-open {
         overflow: hidden !important;
+        position: fixed;
+        width: 100%;
+    }
+}
+
+/* ===============================
+   AJUSTES EXTRA PARA VERTICAL
+================================ */
+
+@media (orientation: portrait) and (max-width: 991.98px) {
+
+    .modal-body {
+        padding-bottom: .5rem;
     }
 }
