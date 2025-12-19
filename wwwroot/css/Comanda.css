@@ -1,0 +1,145 @@
+﻿/* --- ESTILO SHAREPOINT / ONEDRIVE --- */
+
+.sp-card {
+    border-radius: 14px;
+    border: 1px solid #e5e7eb;
+    background-color: #fff;
+    transition: transform .15s ease, box-shadow .15s ease;
+    cursor: pointer;
+}
+
+    .sp-card:hover {
+        transform: translateY(-4px);
+        box-shadow: 0 12px 30px rgba(0,0,0,.08);
+    }
+
+.sp-accent {
+    height: 6px;
+    border-top-left-radius: 14px;
+    border-top-right-radius: 14px;
+}
+
+.sp-label {
+    font-size: .7rem;
+    color: #6b7280;
+    text-transform: uppercase;
+    letter-spacing: .04em;
+}
+
+.sp-value {
+    font-weight: 600;
+    color: #111827;
+}
+
+.sp-muted {
+    color: #6b7280;
+    font-size: .85rem;
+}
+
+.sp-icon {
+    width: 38px;
+    height: 38px;
+    border-radius: 50%;
+    background-color: #f3f4f6;
+    color: #374151;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.1rem;
+}
+
+.sp-list-item {
+    display: flex;
+    justify-content: space-between;
+    padding: .35rem 0;
+    border-bottom: 1px dashed #e5e7eb;
+    font-size: .9rem;
+}
+
+    .sp-list-item:last-child {
+        border-bottom: none;
+    }
+
+
+
+.filter-btn {
+    border-radius: 999px;
+    padding: .45rem 1.1rem;
+    font-weight: 500;
+    transition: all .15s ease-in-out;
+    border-width: 1.5px;
+}
+
+    .filter-btn:hover {
+        transform: translateY(-1px);
+        box-shadow: 0 6px 14px rgba(0,0,0,.08);
+    }
+
+.filter-pendiente {
+    color: #dc3545;
+    border-color: #dc3545;
+    background-color: #fff;
+}
+
+    .filter-pendiente:hover {
+        background-color: #dc3545;
+        color: #fff;
+    }
+
+.filter-proceso {
+    color: #ffc107;
+    border-color: #ffc107;
+    background-color: #fff;
+}
+
+    .filter-proceso:hover {
+        background-color: #ffc107;
+        color: #212529;
+    }
+
+.filter-terminada {
+    color: #198754;
+    border-color: #198754;
+    background-color: #fff;
+}
+
+    .filter-terminada:hover {
+        background-color: #198754;
+        color: #fff;
+    }
+
+
+.filter-btn {
+    padding: .35rem .75rem;
+    font-weight: 500;
+    border-radius: 20px;
+}
+
+.filter-btn {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: .9rem;
+}
+
+
+/* ===== MODAL GRANDE PARA TABLET ===== */
+
+.modal-super {
+    max-width: 95vw; /* casi todo el ancho */
+    height: 92vh; /* casi toda la altura */
+}
+
+    .modal-super .modal-content {
+        height: 100%;
+    }
+
+    .modal-super .modal-body {
+        overflow-y: auto;
+        font-size: 1rem;
+    }
+
+.modal-fullscreen .modal-content {
+    border-radius: 0;
+}
