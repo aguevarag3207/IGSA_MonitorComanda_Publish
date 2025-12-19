@@ -143,3 +143,126 @@
 .modal-fullscreen .modal-content {
     border-radius: 0;
 }
+
+
+body {
+    padding-bottom: env(safe-area-inset-bottom);
+}
+
+button,
+.btn,
+.form-control,
+.form-select {
+    min-height: 44px;
+}
+
+body {
+    padding-bottom: env(safe-area-inset-bottom);
+}
+
+input,
+select,
+textarea {
+    font-size: 16px;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+
+
+
+/* --- CARDS --- */
+.sp-card {
+    border-radius: 14px;
+    border: 1px solid #e5e7eb;
+    background-color: #fff;
+    transition: transform .15s ease, box-shadow .15s ease;
+    cursor: pointer;
+}
+
+    .sp-card:hover {
+        transform: translateY(-3px);
+        box-shadow: 0 12px 30px rgba(0,0,0,.08);
+    }
+
+.sp-accent {
+    height: 6px;
+    border-top-left-radius: 14px;
+    border-top-right-radius: 14px;
+}
+
+.sp-label {
+    font-size: .7rem;
+    color: #6b7280;
+    text-transform: uppercase;
+    letter-spacing: .04em;
+}
+
+.sp-value {
+    font-weight: 600;
+    color: #111827;
+}
+
+.sp-muted {
+    color: #6b7280;
+    font-size: .85rem;
+}
+
+.sp-icon {
+    width: 42px;
+    height: 42px;
+    border-radius: 50%;
+    background-color: #f3f4f6;
+    color: #374151;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* --- LISTA --- */
+.sp-list-item {
+    display: flex;
+    justify-content: space-between;
+    padding: .6rem 0;
+    border-bottom: 1px dashed #e5e7eb;
+}
+
+/* --- FILTROS --- */
+.filter-btn {
+    min-height: 48px;
+    border-radius: 999px;
+    font-weight: 500;
+    transition: all .15s ease-in-out;
+}
+
+    .filter-btn:hover {
+        transform: translateY(-1px);
+        box-shadow: 0 6px 14px rgba(0,0,0,.08);
+    }
+
+.filter-pendiente {
+    color: #dc3545;
+    border-color: #dc3545;
+    background-color: #fff;
+}
+
+.filter-proceso {
+    color: #ffc107;
+    border-color: #ffc107;
+    background-color: #fff;
+}
+
+.filter-terminada {
+    color: #198754;
+    border-color: #198754;
+    background-color: #fff;
+}
+
+/* --- MODAL MOBILE --- */
+@media (max-width: 768px) {
+    .modal-header .btn-close {
+        display: none;
+    }
+}
