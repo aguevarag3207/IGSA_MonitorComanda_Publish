@@ -279,3 +279,18 @@ textarea {
 .sp-card {
     min-height: 225px;
 }
+
+/* ===============================
+   OBSERVACIONES CARD
+================================ */
+
+.observaciones-card {
+    margin-top: .25rem;
+    font-size: 12px;
+    color: #6b7280;
+    /* CLAVE */
+    white-space: normal;
+    word-break: break-word;
+    overflow-wrap: anywhere;
+    line-height: 1.3;
+}
