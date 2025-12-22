@@ -294,3 +294,67 @@ textarea {
     overflow-wrap: anywhere;
     line-height: 1.3;
 }
+
+
+/* ===============================
+   MOBILE VERTICAL – CARDS MÁS ANCHAS
+================================ */
+
+@media (orientation: portrait) and (max-width: 576px) {
+
+    .container-fluid {
+        padding-left: .75rem !important;
+        padding-right: .75rem !important;
+    }
+
+    .sp-card {
+        border-radius: 12px;
+    }
+}
+
+
+/* ===============================
+   MOBILE VERTICAL – HEADER CARD
+================================ */
+
+@media (orientation: portrait) and (max-width: 576px) {
+
+    .sp-card .fw-semibold {
+        font-size: 14px !important;
+    }
+
+    .sp-icon {
+        width: 34px;
+        height: 34px;
+        font-size: 1rem;
+    }
+
+    .sp-card .badge {
+        font-size: .7rem;
+        padding: .3rem .55rem;
+    }
+
+    .sp-card .text-muted {
+        font-size: .7rem;
+    }
+}
+
+
+@media (orientation: portrait) and (max-width: 576px) {
+
+    .sp-card .card-body {
+        padding: .75rem;
+    }
+
+    .sp-card .mb-3 {
+        margin-bottom: .5rem !important;
+    }
+}
+
+@media (orientation: portrait) and (max-width: 576px) {
+
+    .observaciones-card {
+        font-size: 11px;
+        line-height: 1.25;
+    }
+}
