@@ -1,6 +1,7 @@
 ﻿/* ===============================
    BASE
 ================================ */
+
 html, body {
     width: 100%;
     height: 100%;
@@ -9,18 +10,33 @@ html, body {
 
 body {
     background-color: #f8f9fa;
+    padding-bottom: env(safe-area-inset-bottom);
+}
+
+/* Tamaños táctiles */
+button,
+.btn,
+.form-control,
+.form-select {
+    min-height: 44px;
+}
+
+input,
+select,
+textarea {
+    font-size: 16px;
 }
 
 /* ===============================
    CARDS
 ================================ */
+
 .sp-card {
     border-radius: 14px;
     border: 1px solid #e5e7eb;
-    background-color: #fff;
+    background-color: #ffffff;
     cursor: pointer;
     transition: transform .15s ease, box-shadow .15s ease;
-    min-height: 230px;
 }
 
     .sp-card:hover {
@@ -30,66 +46,338 @@ body {
 
 .sp-accent {
     height: 6px;
-    border-radius: 14px 14px 0 0;
+    border-top-left-radius: 14px;
+    border-top-right-radius: 14px;
+}
+
+.sp-label {
+    font-size: .7rem;
+    color: #6b7280;
+    text-transform: uppercase;
+    letter-spacing: .04em;
+}
+
+.sp-value {
+    font-weight: 600;
+    color: #111827;
+}
+
+.sp-muted {
+    color: #6b7280;
+    font-size: .85rem;
 }
 
 .sp-icon {
     width: 42px;
     height: 42px;
     border-radius: 50%;
-    background: #f3f4f6;
+    background-color: #f3f4f6;
+    color: #374151;
     display: flex;
     align-items: center;
     justify-content: center;
 }
 
 /* ===============================
-   CARD HEADER
+   LISTAS
 ================================ */
-.card-header-title {
-    font-size: 16px;
-    line-height: 1.25;
+
+.sp-list-item {
+    display: flex;
+    justify-content: space-between;
+    padding: .6rem 0;
+    border-bottom: 1px dashed #e5e7eb;
+    font-size: .9rem;
 }
 
-.observaciones-card {
-    font-size: 12px;
-    color: #6b7280;
-    line-height: 1.3;
-    word-break: break-word;
+    .sp-list-item:last-child {
+        border-bottom: none;
+    }
+
+/* ===============================
+   FILTROS
+================================ */
+
+.filter-btn {
+    min-height: 40px;
+    padding: .35rem .75rem;
+    font-size: .85rem;
+    border-radius: 999px;
+    font-weight: 500;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all .15s ease-in-out;
+}
+
+    .filter-btn:hover {
+        transform: translateY(-1px);
+        box-shadow: 0 6px 14px rgba(0,0,0,.08);
+    }
+
+.filter-pendiente {
+    color: #dc3545;
+    border-color: #dc3545;
+    background-color: #fff;
+}
+
+.filter-proceso {
+    color: #ffc107;
+    border-color: #ffc107;
+    background-color: #fff;
+}
+
+.filter-terminada {
+    color: #198754;
+    border-color: #198754;
+    background-color: #fff;
 }
 
 /* ===============================
-   MOBILE (≤576px)
+   MODAL BASE
 ================================ */
-@media (max-width: 576px) and (orientation: portrait) {
 
-    .card-header-title {
-        font-size: 14px;
+.modal-header {
+    border-bottom: 1px solid #e5e7eb;
+    padding: .75rem 1rem;
+}
+
+    .modal-header .badge {
+        font-size: .9rem;
+    }
+
+.modal-body {
+    font-size: .95rem;
+}
+
+.modal-footer {
+    border-top: 1px solid #e5e7eb;
+    padding: .4rem;
+}
+
+    .modal-footer .btn {
+        flex: 1;
+        min-height: 36px;
+        font-size: .8rem;
+        padding: .35rem .5rem;
+    }
+
+/* ===============================
+   MODAL RESPONSIVE BASE
+================================ */
+
+@media (max-width: 991.98px) {
+
+    .modal {
+        padding: 0 !important;
+    }
+
+    .modal-dialog {
+        margin: 0 auto;
+        width: 100vw;
+        max-width: 100vw;
+        height: 100dvh;
+    }
+
+    .modal-content {
+        height: 100dvh;
+        border-radius: 0;
+        display: flex;
+        flex-direction: column;
+        overflow: hidden;
+    }
+
+    .modal-body {
+        flex: 1 1 auto;
+        overflow-y: auto;
+        -webkit-overflow-scrolling: touch;
+    }
+
+    body.modal-open {
+        overflow: hidden !important;
+        position: fixed;
+        width: 100%;
+    }
+}
+
+/* ===============================
+   VERTICAL (NO TOCAR ✔)
+================================ */
+
+@media (orientation: portrait) and (max-width: 991.98px) {
+
+    .modal-dialog {
+        height: 92dvh;
+    }
+
+    .modal-content {
+        height: 92dvh;
+    }
+}
+
+/* ===============================
+   HORIZONTAL OPTIMIZADO
+================================ */
+
+@media (orientation: landscape) and (max-width: 991.98px) {
+
+    .modal-dialog {
+        height: 92dvh; /* 👈 lo que pediste */
+    }
+
+    .modal-content {
+        height: 92dvh;
+    }
+
+    /* Texto más compacto */
+    .modal-body {
+        font-size: .85rem;
+    }
+
+    .sp-label {
+        font-size: .6rem;
+    }
+
+    .sp-value {
+        font-size: .85rem;
+    }
+
+    .sp-list-item {
+        font-size: .8rem;
+        padding: .4rem 0;
+    }
+
+    /* Header más compacto */
+    .modal-header {
+        padding: .5rem .75rem;
+    }
+
+        .modal-header h4 {
+            font-size: 1rem;
+        }
+
+        .modal-header .badge {
+            font-size: .75rem;
+            padding: .35rem .6rem;
+        }
+
+    /* Footer ultra compacto */
+    .modal-footer {
+        padding: .3rem;
+        gap: .4rem;
+    }
+
+        .modal-footer .btn {
+            min-height: 32px;
+            font-size: .75rem;
+            padding: .25rem .4rem;
+        }
+
+
+}
+
+.sp-card {
+    min-height: 230px;
+}
+
+/* ===============================
+   OBSERVACIONES CARD
+================================ */
+
+.observaciones-card {
+    margin-top: .25rem;
+    font-size: 12px;
+    color: #6b7280;
+    /* CLAVE */
+    white-space: normal;
+    word-break: break-word;
+    overflow-wrap: anywhere;
+    line-height: 1.3;
+}
+
+
+/* ===============================
+   MOBILE VERTICAL – CARDS MÁS ANCHAS
+================================ */
+
+@media (orientation: portrait) and (max-width: 576px) {
+
+    .container-fluid {
+        padding-left: .75rem !important;
+        padding-right: .75rem !important;
+    }
+
+    .sp-card {
+        border-radius: 12px;
+    }
+}
+
+
+/* ===============================
+   MOBILE VERTICAL – HEADER CARD
+================================ */
+
+@media (orientation: portrait) and (max-width: 576px) {
+
+    .sp-card .fw-semibold {
+        font-size: 14px !important;
     }
 
     .sp-icon {
         width: 34px;
         height: 34px;
+        font-size: 1rem;
     }
 
     .sp-card .badge {
         font-size: .7rem;
+        padding: .3rem .55rem;
+    }
+
+    .sp-card .text-muted {
+        font-size: .7rem;
     }
 }
 
-/* ===============================
-   GALAXY TAB A9 (SM-X210)
-   PORTRAIT — 800px
-================================ */
-@media screen and (orientation: portrait) and (min-width: 780px) and (max-width: 820px) {
 
-    /* 2 cards por fila */
-    .row.row-cols-md-2.row-cols-lg-3 > * {
-        flex: 0 0 50%;
-        max-width: 50%;
+@media (orientation: portrait) and (max-width: 576px) {
+
+    .sp-card .card-body {
+        padding: .75rem;
     }
 
-    /* Ocultar filtros como mobile */
+    .sp-card .mb-3 {
+        margin-bottom: .5rem !important;
+    }
+}
+
+@media (orientation: portrait) and (max-width: 576px) {
+
+    .observaciones-card {
+        font-size: 11px;
+        line-height: 1.25;
+    }
+}
+
+
+/* ===============================
+   TABLET VERTICAL – 2 CARDS
+================================ */
+
+@media (orientation: portrait) and (min-width: 768px) and (max-width: 991.98px) {
+
+    .row.row-cols-lg-3 {
+        --bs-columns: 2;
+    }
+}
+
+
+/* ===============================
+   TABLET VERTICAL – FILTROS COMO MOBILE
+================================ */
+
+@media (orientation: portrait) and (min-width: 768px) and (max-width: 991.98px) {
+
     #filtrosCollapse {
         display: none !important;
     }
@@ -97,16 +385,113 @@ body {
     .d-md-none {
         display: block !important;
     }
+}
 
-    /* HEADER MÁS PEQUEÑO */
+@media (orientation: portrait) and (min-width: 768px) and (max-width: 991.98px) {
+
+    .container-fluid {
+        padding-left: 1rem;
+        padding-right: 1rem;
+    }
+}
+
+/* ===============================
+   CARD HEADER – DEFAULT
+================================ */
+
+.card-header-title {
+    font-size: 16px;
+}
+
+/* ===============================
+   TABLET VERTICAL – HEADER MÁS PEQUEÑO
+================================ */
+
+@media (orientation: portrait) and (min-width: 768px) and (max-width: 1500px) {
+
     .card-header-title {
-        font-size: 13px;
+        font-size: 10px;
+        line-height: 1.2;
+    }
+
+    .sp-icon {
+        width: 34px;
+        height: 34px;
+        font-size: 1rem;
+    }
+
+    .badge {
+        font-size: .65rem;
+        padding: .25rem .5rem;
+    }
+}
+
+/* ===============================
+   TABLET VERTICAL – AJUSTES REALES
+================================ */
+
+@media (orientation: portrait) and (min-width: 768px) and (max-width: 991.98px) {
+
+    /* HEADER DEL CARD */
+    .sp-card .card-header-line {
+        gap: .4rem;
+    }
+
+        .sp-card .card-header-line .fw-semibold {
+            font-size: 13px;
+            line-height: 1.2;
+        }
+
+        .sp-card .card-header-line .text-muted {
+            font-size: 11px;
+        }
+
+    .sp-card .sp-icon {
+        width: 32px;
+        height: 32px;
+        font-size: 1rem;
+    }
+
+    .sp-card .badge {
+        font-size: .65rem;
+        padding: .25rem .45rem;
+    }
+}
+
+@media (orientation: portrait) and (min-width: 768px) and (max-width: 991.98px) {
+
+    #filtrosCollapse {
+        display: none !important;
+    }
+
+    .d-md-none {
+        display: block !important;
+    }
+}
+
+
+/* ===============================
+   GALAXY TAB A9 (SM-X210)
+   PORTRAIT — 800 x 1340
+================================ */
+@media screen and (orientation: portrait) and (min-width: 780px) and (max-width: 820px) {
+
+    /* ===============================
+       HEADER CARD (FUENTE MÁS PEQUEÑA)
+    ================================ */
+    .sp-card .card-title {
+        font-size: 13px !important;
         line-height: 1.15;
+    }
+
+    .sp-card .text-muted {
+        font-size: 11px;
     }
 
     .sp-icon {
         width: 32px;
         height: 32px;
+        font-size: 1rem;
     }
 
     .sp-card .badge {
@@ -114,7 +499,22 @@ body {
         padding: .25rem .45rem;
     }
 
-    .observaciones-card {
-        font-size: 11px;
+    /* ===============================
+       2 CARDS POR FILA
+    ================================ */
+    .row.row-cols-md-2.row-cols-lg-3 > * {
+        flex: 0 0 50%;
+        max-width: 50%;
+    }
+
+    /* ===============================
+       OCULTAR FILTROS (COMO HORIZONTAL)
+    ================================ */
+    #filtrosCollapse {
+        display: none !important;
+    }
+
+    .d-md-none {
+        display: block !important;
     }
 }
