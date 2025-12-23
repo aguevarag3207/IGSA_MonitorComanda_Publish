@@ -394,3 +394,34 @@ textarea {
         padding-right: 1rem;
     }
 }
+
+/* ===============================
+   CARD HEADER – DEFAULT
+================================ */
+
+.card-header-title {
+    font-size: 16px;
+}
+
+/* ===============================
+   TABLET VERTICAL – HEADER MÁS PEQUEÑO
+================================ */
+
+@media (orientation: portrait) and (min-width: 768px) and (max-width: 991.98px) {
+
+    .card-header-title {
+        font-size: 13px;
+        line-height: 1.2;
+    }
+
+    .sp-icon {
+        width: 34px;
+        height: 34px;
+        font-size: 1rem;
+    }
+
+    .badge {
+        font-size: .65rem;
+        padding: .25rem .5rem;
+    }
+}
