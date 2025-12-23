@@ -480,12 +480,12 @@ textarea {
        HEADER CARD (FUENTE MÁS PEQUEÑA)
     ================================ */
     .sp-card .card-title {
-        font-size: 13px !important;
+        font-size: 10px !important;
         line-height: 1.15;
     }
 
     .sp-card .text-muted {
-        font-size: 11px;
+        font-size: 10px;
     }
 
     .sp-icon {
