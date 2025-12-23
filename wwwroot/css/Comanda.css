@@ -358,3 +358,39 @@ textarea {
         line-height: 1.25;
     }
 }
+
+
+/* ===============================
+   TABLET VERTICAL – 2 CARDS
+================================ */
+
+@media (orientation: portrait) and (min-width: 768px) and (max-width: 991.98px) {
+
+    .row.row-cols-lg-3 {
+        --bs-columns: 2;
+    }
+}
+
+
+/* ===============================
+   TABLET VERTICAL – FILTROS COMO MOBILE
+================================ */
+
+@media (orientation: portrait) and (min-width: 768px) and (max-width: 991.98px) {
+
+    #filtrosCollapse {
+        display: none !important;
+    }
+
+    .d-md-none {
+        display: block !important;
+    }
+}
+
+@media (orientation: portrait) and (min-width: 768px) and (max-width: 991.98px) {
+
+    .container-fluid {
+        padding-left: 1rem;
+        padding-right: 1rem;
+    }
+}
