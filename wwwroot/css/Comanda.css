@@ -407,10 +407,10 @@ textarea {
    TABLET VERTICAL – HEADER MÁS PEQUEÑO
 ================================ */
 
-@media (orientation: portrait) and (min-width: 768px) and (max-width: 991.98px) {
+@media (orientation: portrait) and (min-width: 768px) and (max-width: 1500px) {
 
     .card-header-title {
-        font-size: 13px;
+        font-size: 10px;
         line-height: 1.2;
     }
 
