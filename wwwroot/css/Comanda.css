@@ -474,7 +474,7 @@ textarea {
    GALAXY TAB A9 (SM-X210)
    PORTRAIT — 800 x 1340
 ================================ */
-@media screen and (orientation: portrait) and (min-width: 780px) and (max-width: 820px) {
+@media screen and (orientation: portrait) and (min-width: 800px) and (max-width: 1340px) {
 
     /* ===============================
        HEADER CARD (FUENTE MÁS PEQUEÑA)
