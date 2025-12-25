@@ -1,0 +1,162 @@
+##############################
+# .NET / ASP.NET / ASP.NET Core
+##############################
+
+# Build results
+bin/
+obj/
+out/
+[Bb]uild/
+[Bb]uild[Ll]og.*
+
+# Publish output
+publish/
+**/publish/
+**/bin/Release/
+**/bin/Debug/
+**/bin/**/publish/
+
+##############################
+# Configuration files
+##############################
+
+# Web config
+web.config
+web.*.config
+
+# App settings
+appsettings.json
+appsettings.*.json
+
+##############################
+# Visual Studio
+##############################
+
+.vs/
+*.user
+*.suo
+*.userosscache
+*.sln.docstates
+*.rsuser
+
+# Visual Studio cache/options
+.vscode/
+.vscode/*
+
+##############################
+# Rider / JetBrains
+##############################
+
+.idea/
+*.sln.iml
+
+##############################
+# NuGet
+##############################
+
+# NuGet packages (uncomment if you want to ignore packages)
+# packages/
+# **/packages/*
+*.nupkg
+*.snupkg
+*.symbols.nupkg
+
+# NuGet cache
+.nuget/
+.nuget/packages/
+
+##############################
+# Test results
+##############################
+
+TestResults/
+*.trx
+*.coverage
+*.coveragexml
+
+##############################
+# Logs
+##############################
+
+*.log
+
+##############################
+# OS generated files
+##############################
+
+# Windows
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+$RECYCLE.BIN/
+
+# macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+
+##############################
+# Temporary files
+##############################
+
+*.tmp
+*.temp
+*.bak
+*.old
+*.orig
+
+##############################
+# IIS / ASP.NET
+##############################
+
+# IIS Express
+.iisexpress/
+
+# ASP.NET runtime
+App_Data/*.mdf
+App_Data/*.ldf
+
+##############################
+# Entity Framework
+##############################
+
+# EF Core migrations snapshots
+*.db
+*.db-shm
+*.db-wal
+
+##############################
+# Docker
+##############################
+
+docker-compose.override.yml
+docker-compose.*.yml
+
+##############################
+# Node / Frontend (if used)
+##############################
+
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+##############################
+# Azure / Publish Profiles
+##############################
+
+# Azure publish settings
+*.PublishSettings
+
+# Web publish profiles
+Properties/PublishProfiles/
+**/Properties/PublishProfiles/
+
+##############################
+# Secrets
+##############################
+
+secrets.json
+*.pfx
+*.cer
+*.key
