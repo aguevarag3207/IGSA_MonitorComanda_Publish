@@ -487,15 +487,18 @@ textarea {
     }
 
 
+
+
 /* ===============================
    BOTONES GRANDES EN MODAL
+   (FORZADO)
 ================================ */
 
-.btn-modal-action {
-    /* padding-top: 25px;
-    padding-bottom: 25px;*/
-    padding: 40px 0;
-    font-size: 18px;
-    font-weight: 600;
+.modal .btn-cambiar {
+    padding: 20px 12px !important;
+    font-size: 1.2rem !important;
+    font-weight: 700 !important;
+    min-height: 70px;
 }
+
 
