@@ -469,3 +469,32 @@ textarea {
     }
 }
 
+
+/* ===============================
+   COMANDA NUEVA (NO ABIERTA)
+================================ */
+
+.sp-card.nueva {
+    border: 2px solid #fd7e14;
+}
+
+    .sp-card.nueva .sp-accent {
+        background-color: #fd7e14 !important;
+    }
+
+    .sp-card.nueva:hover {
+        box-shadow: 0 0 0 3px rgba(253, 126, 20, 0.25);
+    }
+
+
+/* ===============================
+   BOTONES GRANDES EN MODAL
+================================ */
+
+.btn-modal-action {
+    padding-top: 25px;
+    padding-bottom: 25px;
+    font-size: 0.95rem;
+    font-weight: 600;
+}
+
